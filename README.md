@@ -1,6 +1,4 @@
 ecm-extender-api
 ================
 
-API of ECM extender that picks up Annotated ECM components if the bundle
-the _org.everit.osgi.ecm.component_ capability and define the class that
-should be extended as the attribute of the capability.
+Documentation: http://www.everit.org/ecm/index.html#ecm-extender-api
