@@ -21,21 +21,26 @@ package org.everit.osgi.ecm.extender;
 public final class ECMExtenderConstants {
 
   /**
-   * Attribute for component capability that tells which class should be analyzed for annotations.
+   * Major part of the version of the API that the extender should implement. This constant can be
+   * used to generate the capability requirement filter.
    */
-  public static final String CAPABILITY_ATTR_CLASS = "class";
+  public static final int EXTENDER_API_VERSION_MAJOR = 3;
 
   /**
-   * Namespace of ECM Component capability.
+   * Minor part of the version of the API that the extender should implement. This constant can be
+   * used to generate the capability requirement filter.
    */
-  public static final String CAPABILITY_NS_COMPONENT = "org.everit.osgi.ecm.component";
+  public static final int EXTENDER_API_VERSION_MINOR = 0;
 
   /**
-   * Namespace of ECM Extender capability. In case a bundle that holds components wires to an
-   * extender based on this capability, only that extender will pick up the components that the
-   * bundle is wired to.
+   * Symbolic name of the ECM Component extender that implements this API.
    */
-  public static final String CAPABILITY_NS_EXTENDER = "org.everit.osgi.ecm.extender";
+  public static final String EXTENDER_SYMBOLIC_NAME = "org.everit.osgi.ecm.component";
+
+  /**
+   * Attribute for capability requirement that tells which class should be analyzed for annotations.
+   */
+  public static final String REQUIREMENT_ATTR_CLASS = "class";
 
   private ECMExtenderConstants() {
   }

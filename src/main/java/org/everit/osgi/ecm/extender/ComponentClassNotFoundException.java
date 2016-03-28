@@ -15,18 +15,17 @@
  */
 package org.everit.osgi.ecm.extender;
 
-import org.osgi.framework.wiring.BundleCapability;
+import org.osgi.framework.wiring.BundleRequirement;
 
 /**
- * Thrown when the class could not have been found that was defined in the
- * {@value ECMExtenderConstants#CAPABILITY_NS_COMPONENT} capability.
+ * Thrown when the component class attribute is not found in the requirement by the extender.
  */
 public class ComponentClassNotFoundException extends RuntimeException {
 
   private static final long serialVersionUID = -962873461264740334L;
 
-  public ComponentClassNotFoundException(final BundleCapability capability,
+  public ComponentClassNotFoundException(final BundleRequirement requirement,
       final ClassNotFoundException cause) {
-    super("The class defined in capability could not be found: " + capability.toString(), cause);
+    super("The class defined in requirement could not be found: " + requirement.toString(), cause);
   }
 }

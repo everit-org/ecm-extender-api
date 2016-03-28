@@ -15,18 +15,15 @@
  */
 package org.everit.osgi.ecm.extender;
 
-import org.osgi.framework.wiring.BundleCapability;
+import org.osgi.framework.wiring.BundleRequirement;
 
-/**
- * Thrown when there is no class attribute in {@value ECMExtenderConstants#CAPABILITY_NS_COMPONENT}
- * capability.
- */
-public class MissingClassAttribute extends RuntimeException {
+@ExtendComponent
+public class MissingClassAttributeException extends RuntimeException {
 
   private static final long serialVersionUID = 631489437095893165L;
 
-  public MissingClassAttribute(final BundleCapability capability) {
-    super("Could not find required '" + ECMExtenderConstants.CAPABILITY_ATTR_CLASS
-        + "' attribute in capability: " + capability.toString());
+  public MissingClassAttributeException(final BundleRequirement requirement) {
+    super("Could not find required '" + ECMExtenderConstants.REQUIREMENT_ATTR_CLASS
+        + "' attribute in requirement: " + requirement.toString());
   }
 }
